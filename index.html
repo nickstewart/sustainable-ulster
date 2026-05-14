@@ -181,21 +181,24 @@
     position: fixed;
     bottom: 0; left: 0; right: 0;
     background: var(--lough-dk);
-    padding: 20px 20px 32px;
+    padding: 28px 24px 44px;
     z-index: 200;
-    box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.25);
     animation: slideUp 0.3s ease;
+    flex-direction: column;
+    gap: 20px;
   }
   @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
-  .install-banner.visible { display: flex; align-items: center; gap: 16px; }
-  .install-banner-icon { font-size: 40px; flex-shrink: 0; }
+  .install-banner.visible { display: flex; }
+  .install-banner-top { display: flex; align-items: center; gap: 16px; }
+  .install-banner-icon { font-size: 48px; flex-shrink: 0; }
   .install-banner-text { flex: 1; }
-  .install-banner-title { font-size: 16px; font-weight: 600; color: #E8F0EC; margin-bottom: 5px; }
-  .install-banner-sub { font-size: 14px; color: #7A9EA0; line-height: 1.6; }
+  .install-banner-title { font-size: 19px; font-weight: 600; color: #E8F0EC; margin-bottom: 6px; }
+  .install-banner-sub { font-size: 16px; color: #7A9EA0; line-height: 1.6; }
   .install-banner-sub strong { color: #B8D0C8; }
-  .install-banner-actions { display: flex; gap: 8px; flex-shrink: 0; }
-  .install-btn { background: var(--ember); color: white; border: none; border-radius: 10px; padding: 12px 18px; font-size: 15px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; white-space: nowrap; }
-  .install-dismiss { background: none; border: 1px solid #4A6A6E; color: #7A9EA0; border-radius: 10px; padding: 12px 14px; font-size: 15px; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .install-banner-actions { display: flex; gap: 10px; }
+  .install-btn { flex: 1; background: var(--ember); color: white; border: none; border-radius: 12px; padding: 16px; font-size: 17px; font-weight: 600; font-family: 'Inter', sans-serif; cursor: pointer; text-align: center; }
+  .install-dismiss { background: none; border: 1px solid #4A6A6E; color: #7A9EA0; border-radius: 12px; padding: 16px 20px; font-size: 17px; font-family: 'Inter', sans-serif; cursor: pointer; }
 
   /* ── FOOTER ── */
   footer { background: var(--lough-dk); padding: 1.5rem; text-align: center; margin-top: 2rem; }
@@ -422,10 +425,12 @@
 </footer>
 
 <div class="install-banner" id="installBanner">
-  <div class="install-banner-icon">🌊</div>
-  <div class="install-banner-text">
-    <div class="install-banner-title">Add to your home screen</div>
-    <div class="install-banner-sub" id="installBannerSub"></div>
+  <div class="install-banner-top">
+    <div class="install-banner-icon">🌊</div>
+    <div class="install-banner-text">
+      <div class="install-banner-title">Add to your home screen</div>
+      <div class="install-banner-sub" id="installBannerSub"></div>
+    </div>
   </div>
   <div class="install-banner-actions">
     <button class="install-btn" id="installBtn">Install</button>
