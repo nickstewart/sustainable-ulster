@@ -1,0 +1,1210 @@
+[
+  {
+    "id": 1,
+    "name": "Strangford Lough Prawn Company",
+    "location": {
+      "label": "Kircubbin Harbour, Ards Peninsula",
+      "lat": 54.4785,
+      "lng": -5.5234
+    },
+    "category": "seafood",
+    "badges": ["sus"],
+    "tags": ["langoustines", "creel-caught", "single-boat"],
+    "sustainabilityMethod": "Hand-pulled creel fishing",
+    "keyFacts": [
+      "Single-handed operation from one small boat, Freya",
+      "Zero seabed disturbance — creels rest on the bottom, not dragged",
+      "Near-zero bycatch — undersized prawns, egg-bearing females and non-target species returned alive",
+      "Sold direct from the harbour — no middlemen, maximum freshness"
+    ],
+    "sustainabilityStory": "Graeme Hackworth's creel fishing is about as low-impact as seafood gets. Twelve creels, hand-hauled, on a lough that's one of Europe's most protected marine sites. The method hasn't changed in generations — and neither has the quality.",
+    "brandVoice": "Quiet, unassuming, deeply authentic. Graeme doesn't do marketing — the product does the talking. Visuals should be early morning, harbour light, wet rope, a box of langoustines.",
+    "contentIdeas": [
+      "Dawn haul — go out with Graeme for a morning creel run",
+      "Side-by-side: creel-caught vs trawled langoustines — taste test",
+      "The boat Freya — a portrait of a working lough vessel"
+    ],
+    "whereToBuy": {
+      "label": "Collection at Kircubbin Harbour or local delivery across North Down and Ards",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [3, 4, 5, 6, 7, 8],
+    "visitable": true,
+    "delivery": true,
+    "wholesale": false,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 2,
+    "name": "Strangford Lough Oysters",
+    "location": {
+      "label": "Strangford Lough",
+      "lat": 54.4200,
+      "lng": -5.5800
+    },
+    "category": "seafood",
+    "badges": ["sus"],
+    "tags": ["oysters", "rope-grown", "aquaculture"],
+    "sustainabilityMethod": "Rope-grown aquaculture in a protected marine site",
+    "keyFacts": [
+      "Grown in a designated European Marine Site and Special Area of Conservation",
+      "Each oyster filters up to 200 litres of water per day",
+      "Aquaculture actively improves water quality — removing nitrogen and phosphorus",
+      "No feed inputs — oysters filter-feed naturally from the lough",
+      "Best May through September"
+    ],
+    "sustainabilityStory": "Oyster farming on Strangford Lough isn't just low-impact — it actively benefits the ecosystem. The lough's exceptional water quality produces a clean, distinctively briny flavour that reflects the place entirely.",
+    "brandVoice": "The lough as larder. Visuals should lean into the water, the ropes, the shells — elemental and clean. The product is the landscape made edible.",
+    "contentIdeas": [
+      "How oyster farming cleans the lough — explainer with visuals",
+      "Shucking on the shore — simple fire content",
+      "Tasting notes: Strangford vs other Irish lough oysters"
+    ],
+    "whereToBuy": {
+      "label": "Local fish markets and farm shops across County Down",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [4, 5, 6, 7, 8, 9, 10],
+    "visitable": false,
+    "delivery": false,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 3,
+    "name": "Portavogie Prawns",
+    "location": {
+      "label": "Portavogie Harbour, Ards Peninsula",
+      "lat": 54.4583,
+      "lng": -5.4383
+    },
+    "category": "seafood",
+    "badges": ["pgi"],
+    "tags": ["prawns", "PGI-protected", "Nephrops", "harbour"],
+    "sustainabilityMethod": "Trawl-caught, Irish Sea, PGI-protected fishery",
+    "keyFacts": [
+      "Protected Geographical Indication — one of very few PGI-protected fresh seafood products in the UK",
+      "Landed at Portavogie, one of Northern Ireland's most active fishing harbours",
+      "Same species as Strangford langoustines (Nephrops norvegicus) — different catching ground, different character",
+      "Landed and sold same-day at the harbour"
+    ],
+    "sustainabilityStory": "The PGI status recognises not just the quality of the catch but the specific character of the place — the Irish Sea grounds off the Ards Peninsula produce a prawn with a distinct flavour profile. The designation protects both the fishery and the community that depends on it.",
+    "brandVoice": "Working harbour energy. Portavogie is a real, active fishing village — not a heritage attraction. Content should reflect the industry, the scale, the early mornings.",
+    "contentIdeas": [
+      "Portavogie at dawn — the fleet going out",
+      "PGI explained: what the designation actually means for the fish and the fishermen",
+      "Comparing Portavogie prawns and Strangford langoustines — same species, different worlds"
+    ],
+    "whereToBuy": {
+      "label": "Portavogie harbour traders, local fishmongers and markets",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [4, 5, 6, 7, 8, 9],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": true,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 4,
+    "name": "Kilkeel Fishing Industry",
+    "location": {
+      "label": "Kilkeel Harbour, foot of the Mournes",
+      "lat": 54.0600,
+      "lng": -5.9983
+    },
+    "category": "seafood",
+    "badges": ["sus"],
+    "tags": ["MSC", "mixed catch", "Mournes", "fleet"],
+    "sustainabilityMethod": "Mixed fleet with progressive MSC certification and low-bycatch gear adoption",
+    "keyFacts": [
+      "Northern Ireland's largest fishing port by volume",
+      "Located at the foot of the Mourne Mountains — one of the most dramatic harbour settings on the island",
+      "Growing number of vessels MSC-certified or working towards it",
+      "Significant brown crab and mixed finfish landing volumes",
+      "Anchor of the County Down seafood economy"
+    ],
+    "sustainabilityStory": "Kilkeel isn't a single producer — it's a community. The harbour has been landing fish for centuries, and the industry is gradually shifting towards more selective, lower-impact gear. The story here is transition — a working port finding a more sustainable future without abandoning its identity.",
+    "brandVoice": "Scale and tradition. Kilkeel is industrial in the best sense — serious, skilled, generational. Content should reflect the weight of the industry, not sanitise it.",
+    "contentIdeas": [
+      "A day on the Kilkeel fleet — following a boat from the Mournes to landing",
+      "MSC certification journey — what it takes for a harbour to go sustainable",
+      "Kilkeel brown crab — landed, cooked, eaten on the harbour wall"
+    ],
+    "whereToBuy": {
+      "label": "Wholesale, local fishmongers and harbour traders",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": true,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 5,
+    "name": "Abernethy Butter",
+    "location": {
+      "label": "Beechtree Farm, Dromara",
+      "lat": 54.3583,
+      "lng": -6.0283
+    },
+    "category": "dairy",
+    "badges": [],
+    "tags": ["hand-churned", "Lagan Valley", "artisan", "butter"],
+    "sustainabilityMethod": "Hand-churned, single-farm cream — minimal processing, no industrial inputs",
+    "keyFacts": [
+      "The only producers in Ireland making butter entirely by hand",
+      "Churned, washed, patted and rolled using traditional wooden butter pats",
+      "Single-farm cream sourced from the Lagan Valley",
+      "Varieties include dulse and sea salt, smoked, and black garlic",
+      "Stocked by Fortnum & Mason, Harrods, and used by Heston Blumenthal at The Fat Duck"
+    ],
+    "sustainabilityStory": "Abernethy is proof that the most traditional method is often the most considered one. No industrial churn, no additives — just cream, craft, and time. The single-farm sourcing means full traceability from cow to pat.",
+    "brandVoice": "Quietly world-class. The Abernethy story sells itself — Harrods, The Fat Duck, hand-made in County Down. Tone should be understated confidence. The wooden pats, the texture, the craft process are the visuals.",
+    "contentIdeas": [
+      "Making butter by hand — process video from churn to wrapped pat",
+      "The dulse and sea salt variety — where the seaweed comes from",
+      "County Down butter at The Fat Duck — the local-to-luxury story"
+    ],
+    "whereToBuy": {
+      "label": "abernethybutter.com · selected delis and farm shops",
+      "url": "https://www.abernethybutter.com"
+    },
+    "contact": {
+      "website": "https://www.abernethybutter.com",
+      "instagram": "@abernethybutter",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": false,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 6,
+    "name": "Millbank Farm",
+    "location": {
+      "label": "Killinchy, Strangford Lough shore",
+      "lat": 54.4817,
+      "lng": -5.6517
+    },
+    "category": "dairy",
+    "badges": [],
+    "tags": ["sixth-generation", "lough-shore", "veg boxes", "farm shop"],
+    "sustainabilityMethod": "Mixed farm, field-to-fork, tree planting and minimal packaging",
+    "keyFacts": [
+      "Sixth-generation family farm, farming the lough shore since 1889",
+      "Own vegetables, sheep, cattle and pigs — genuinely mixed operation",
+      "On-site farm shop stocking own produce alongside local goods",
+      "Active tree planting programme and commitment to minimal packaging",
+      "Seasonal veg boxes direct from the farm"
+    ],
+    "sustainabilityStory": "Six generations on the same lough shore since 1889. Millbank isn't pursuing sustainability as a trend — it's how the farm has always operated. The tree planting and packaging reduction are extensions of a long-held ethic rather than recent additions.",
+    "brandVoice": "Rooted, generational, quietly proud. The longevity is the story — 1889 to now, same family, same lough. Visuals should be the farm, the shore, the seasons turning.",
+    "contentIdeas": [
+      "Six generations — a portrait of the family and the farm",
+      "First Comber Earlies of the season — arriving at Millbank",
+      "The view from the farm: Strangford Lough as a working landscape"
+    ],
+    "whereToBuy": {
+      "label": "millbankfarm.com · on-site farm shop at Killinchy",
+      "url": "https://www.millbankfarm.com"
+    },
+    "contact": {
+      "website": "https://www.millbankfarm.com",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": true,
+    "wholesale": false,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 7,
+    "name": "Echlinville Distillery",
+    "location": {
+      "label": "Kircubbin, Ards Peninsula",
+      "lat": 54.4817,
+      "lng": -5.5317
+    },
+    "category": "spirits",
+    "badges": [],
+    "tags": ["whiskey", "gin", "field-to-bottle", "Jawbox", "Dunville's"],
+    "sustainabilityMethod": "Field-to-bottle — grain grown, milled and distilled on a single estate",
+    "keyFacts": [
+      "One of the first new whiskey distilleries to open in Ireland in over a century",
+      "Grain grown on their own Ards Peninsula farm — genuinely field-to-bottle",
+      "Produces Dunville's Irish Whiskey and Jawbox Gin",
+      "Milling and distilling all on the same estate at Kircubbin",
+      "Full traceability from field to glass"
+    ],
+    "sustainabilityStory": "Echlinville is one of very few distilleries anywhere that can genuinely claim field-to-bottle provenance. The grain is grown on the estate, harvested, milled and distilled on site. The Ards Peninsula is in the bottle.",
+    "brandVoice": "Craft with substance. Echlinville's story is about place and provenance — not lifestyle marketing. The field, the still, the bottle. Visuals: grain harvest on the peninsula, the distillery at dusk, Jawbox in context.",
+    "contentIdeas": [
+      "Harvest to glass — following the grain from Ards Peninsula field to finished bottle",
+      "Jawbox Gin: the botanicals and the place they come from",
+      "The revival of Irish whiskey distilling — Echlinville's role in the story"
+    ],
+    "whereToBuy": {
+      "label": "echlinville.com · distillery shop · local retailers",
+      "url": "https://www.echlinville.com"
+    },
+    "contact": {
+      "website": "https://www.echlinville.com",
+      "instagram": "@echlinvilledistillery",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 8,
+    "name": "Copeland Distillery",
+    "location": {
+      "label": "Donaghadee, North Ards",
+      "lat": 54.6400,
+      "lng": -5.5317
+    },
+    "category": "spirits",
+    "badges": [],
+    "tags": ["craft", "Copeland Islands", "whiskey", "rum", "vodka"],
+    "sustainabilityMethod": "Small-batch craft distilling with strong local provenance",
+    "keyFacts": [
+      "Named for the Copeland Islands off the Down coast near Donaghadee",
+      "Small-batch production — whiskey, rum and vodka",
+      "Strong sense of local identity rooted in the County Down shoreline",
+      "One of a new generation of Northern Irish craft distillers"
+    ],
+    "sustainabilityStory": "Copeland's identity is inseparable from the Down coastline — the islands, the sea light, the harbour town of Donaghadee. The small-batch approach keeps production considered and the provenance genuine.",
+    "brandVoice": "Coastal and contemporary. Younger energy than Echlinville — the Copeland Islands imagery gives strong visual identity. Sea, light, small batches, a harbour town.",
+    "contentIdeas": [
+      "The Copeland Islands — what they are and why the distillery took their name",
+      "Donaghadee harbour at sunset with a Copeland dram",
+      "Rum from the Down coast — unexpected and worth exploring"
+    ],
+    "whereToBuy": {
+      "label": "copelanddistillery.com · local retailers and delis",
+      "url": "https://www.copelanddistillery.com"
+    },
+    "contact": {
+      "website": "https://www.copelanddistillery.com",
+      "instagram": "@copelanddistillery",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 9,
+    "name": "Comber Farmers' Market",
+    "location": {
+      "label": "Comber Town Square, Ards Peninsula",
+      "lat": 54.5500,
+      "lng": -5.7417
+    },
+    "category": "veg",
+    "badges": ["pgi"],
+    "tags": ["Comber Earlies", "PGI-protected", "farmers market", "new potatoes"],
+    "sustainabilityMethod": "Farmers' market connecting local growers directly with consumers",
+    "keyFacts": [
+      "Home of the Comber Earlies — PGI-protected new potatoes unique to this area",
+      "Comber Earlies are among the first new potatoes of the Irish season each year",
+      "The rich soils around Comber produce an unusually sweet, waxy early potato",
+      "The market anchors the local artisan producer network across the Ards Peninsula",
+      "PGI status protects both the product and the growers who produce it"
+    ],
+    "sustainabilityStory": "The Comber Earlies PGI is one of the most tangible examples of food geography in Northern Ireland — a potato that genuinely tastes of a specific place and soil. The farmers' market keeps that connection between grower and eater direct and local.",
+    "brandVoice": "Grounded and seasonal. The Comber Earlies are the star — the market is the setting. First-of-season energy: something genuinely anticipated, genuinely worth waiting for.",
+    "contentIdeas": [
+      "First Comber Earlies of the year — the moment they arrive at market",
+      "What makes a Comber Early different — soil, variety, place",
+      "PGI explained through the potato: a tangible local example"
+    ],
+    "whereToBuy": {
+      "label": "Comber town square — regular market dates throughout the year",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [4, 5, 6, 7, 8, 9],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": false,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 10,
+    "name": "Finnebrogue Artisan",
+    "location": {
+      "label": "Finnebrogue Estate, Downpatrick",
+      "lat": 54.3283,
+      "lng": -5.7017
+    },
+    "category": "meat",
+    "badges": ["sus"],
+    "tags": ["venison", "wagyu", "nitrite-free", "Downpatrick", "deer"],
+    "sustainabilityMethod": "Artisan processing, estate-reared deer and cattle, nitrite-free production",
+    "keyFacts": [
+      "Pioneers of nitrite-free bacon — reformulated without preservatives now widely adopted across the industry",
+      "Red deer farmed on the Finnebrogue Estate outside Downpatrick",
+      "Wagyu beef raised on the estate — one of very few UK producers",
+      "Full traceability from estate to shelf",
+      "Stocked in major supermarkets and independent delis across the UK and Ireland"
+    ],
+    "sustainabilityStory": "Finnebrogue changed the bacon industry by removing nitrites — additives linked to health concerns that had been standard for decades. That instinct to challenge the conventional runs through everything they do, from deer farming to wagyu beef on a Down estate.",
+    "brandVoice": "Innovation with integrity. Finnebrogue isn't a small artisan operation — it's a serious food business that happens to do things properly. The estate, the deer, the reformulation story all have weight.",
+    "contentIdeas": [
+      "The nitrite-free story — how Finnebrogue changed British bacon",
+      "Deer on the Downpatrick estate — a portrait of the herd",
+      "Finnebrogue venison cooked over fire — autumn content"
+    ],
+    "whereToBuy": {
+      "label": "finnebrogue.com · major supermarkets and delis across UK and Ireland",
+      "url": "https://www.finnebrogue.com"
+    },
+    "contact": {
+      "website": "https://www.finnebrogue.com",
+      "instagram": "@finnebrogueartisan",
+      "phone": "",
+      "email": ""
+    },
+    "season": [8, 9, 10, 11],
+    "visitable": false,
+    "delivery": false,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 11,
+    "name": "Helen's Bay Organic Gardens",
+    "location": {
+      "label": "Helen's Bay, North Down coast",
+      "lat": 54.6783,
+      "lng": -5.7183
+    },
+    "category": "veg",
+    "badges": ["sus"],
+    "tags": ["certified organic", "veg boxes", "farm shop", "Belfast Lough"],
+    "sustainabilityMethod": "Fully certified organic horticulture — no pesticides, no herbicides, closed fertility loop",
+    "keyFacts": [
+      "Established in 1991 by John McCormick — one of Northern Ireland's organic pioneers",
+      "20-acre holding beside Belfast Lough growing over 50 varieties of vegetables",
+      "EU and IOA certified organic — licence no. 7024",
+      "Hens' manure feeds the farm's own fertility programme — a genuinely closed loop",
+      "Targets 75% local supply — currently sourcing around 65% from Northern Ireland farms",
+      "Farm shop open Fridays 10am–4pm; stall at St George's Market Belfast on Saturdays"
+    ],
+    "sustainabilityStory": "Since 1991, Helen's Bay Organic has been quietly proving that certified organic horticulture is viable on the North Down coast. The fertility loop — hens on site, manure back into the soil — is a model of closed-system growing. John McCormick built this before organic was a marketing term.",
+    "brandVoice": "Pioneer energy, not trend energy. This is 35 years of organic conviction on the Belfast Lough shore. Visuals should be polytunnels, coastal light, the Friday farm shop, the Saturday St George's stall.",
+    "contentIdeas": [
+      "35 years organic — a portrait of John McCormick and what he built at Helen's Bay",
+      "The closed fertility loop: hens, manure, soil, vegetables",
+      "Friday farm shop: what's ready this week on the lough shore"
+    ],
+    "whereToBuy": {
+      "label": "helensbayorganic.com · Farm shop Fridays 10am–4pm · St George's Market Belfast, Saturdays · delivery across Northern Ireland",
+      "url": "https://www.helensbayorganic.com"
+    },
+    "contact": {
+      "website": "https://www.helensbayorganic.com",
+      "instagram": "@helensbayorganic",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": true,
+    "wholesale": false,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 12,
+    "name": "Laurelbank Farm",
+    "location": {
+      "label": "Saintfield, County Down",
+      "lat": 54.4750,
+      "lng": -5.9917
+    },
+    "category": "veg",
+    "badges": ["sus"],
+    "tags": ["organic", "CSA", "community supported agriculture", "regenerative", "edible flowers"],
+    "sustainabilityMethod": "Regenerative organic smallholding with Community Supported Agriculture scheme",
+    "keyFacts": [
+      "7-acre organic smallholding just outside Saintfield in County Down",
+      "Runs a Community Supported Agriculture (CSA) scheme called Farm and Feast",
+      "Grows vegetables, herbs, fruit and edible flowers across kitchen garden, field beds and polytunnels",
+      "Early 19th century farmhouse — history and purpose combined",
+      "Regular volunteer days, supper clubs, growing and cooking workshops",
+      "Mission: to reconnect people to the land through farming and feasting"
+    ],
+    "sustainabilityStory": "Laurelbank is one of the most community-rooted food projects in County Down. The CSA model means members are genuinely invested in the harvest — they show up, they plant, they eat what they grew. The farm and feast ethos turns food production into a shared experience rather than a transaction.",
+    "brandVoice": "Warm, communal, hands-in-the-soil energy. This is the antithesis of anonymous food. The supper clubs, the volunteer mornings, the edible flower beds — all deeply photogenic and deeply human.",
+    "contentIdeas": [
+      "A CSA explained through Laurelbank — what it means to be a farm member",
+      "Volunteer morning to supper club — a full day at the farm",
+      "Edible flowers from County Down — what grows and what you do with them"
+    ],
+    "whereToBuy": {
+      "label": "laurelbankfarm.org · CSA membership and supper club events",
+      "url": "https://www.laurelbankfarm.org"
+    },
+    "contact": {
+      "website": "https://www.laurelbankfarm.org",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [3, 4, 5, 6, 7, 8, 9, 10],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": false,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 13,
+    "name": "Ballystockart Honey",
+    "location": {
+      "label": "Comber & Murlough (Dundrum), County Down",
+      "lat": 54.5500,
+      "lng": -5.7200
+    },
+    "category": "honey",
+    "badges": ["sus"],
+    "tags": ["raw honey", "beeswax", "Comber", "Murlough", "direct sales"],
+    "sustainabilityMethod": "Small-scale apiary beekeeping — two hives, direct to consumer, beeswax repurposed for plastic-free wraps",
+    "keyFacts": [
+      "Family operation — Valerie, Frank and Finn McMullan",
+      "Two apiaries: Ballystockart (Comber) and Murlough (Dundrum, near the dunes)",
+      "Sold direct from the producer — jars from £6.50, bulk 4kg buckets available",
+      "Beeswax melted down and supplied to local producers making plastic-free food wraps",
+      "Award-winning Murlough honey — 1st place at honey show"
+    ],
+    "sustainabilityStory": "Two hives, two distinctive honeys from very different County Down landscapes — the farmland around Comber and the dune system at Murlough. Valerie's beeswax goes back into the local economy as plastic-free wraps, closing the loop entirely.",
+    "brandVoice": "Unpretentious, local, family-run. This is beekeeping at a human scale — sold direct, priced fairly, rooted in a specific place. Murlough honey has a wildness to it that reflects the dune landscape.",
+    "contentIdeas": [
+      "Two landscapes, two honeys — tasting Ballystockart vs Murlough side by side",
+      "Beeswax to wrap — following the wax from hive to plastic-free food wrap",
+      "Beekeeping in Comber: Finn's journey into the family apiary"
+    ],
+    "whereToBuy": {
+      "label": "Direct from producer — contact via Facebook",
+      "url": "https://www.facebook.com/BallystockartHoney"
+    },
+    "contact": {
+      "website": "",
+      "instagram": "@ballystockart",
+      "phone": "",
+      "email": ""
+    },
+    "season": [5, 6, 7, 8, 9, 10],
+    "visitable": false,
+    "delivery": false,
+    "wholesale": false,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 14,
+    "name": "Veesbees / Loughshore Apiary",
+    "location": {
+      "label": "Greyabbey, Ards Peninsula",
+      "lat": 54.5383,
+      "lng": -5.5717
+    },
+    "category": "honey",
+    "badges": ["sus"],
+    "tags": ["native Irish black bee", "conservation", "raw honey", "beeswax", "skincare", "Ards Peninsula"],
+    "sustainabilityMethod": "Conservation-focused beekeeping — protecting and breeding the native Irish black bee across the Ards Peninsula",
+    "keyFacts": [
+      "Established 2004 by Valentine and Chris at Loughshore Apiary, Greyabbey",
+      "Primary mission: conservation of the native Irish black bee (Apis mellifera mellifera)",
+      "Apiaries sited across the Ards Peninsula — honey reflects the local flora within a 3-mile radius of each hive",
+      "Profits support wildflower meadow introduction and native bee habitat improvement",
+      "Also produces natural beeswax skincare products"
+    ],
+    "sustainabilityStory": "Veesbees is as much a conservation project as a honey producer. The native Irish black bee — at home in this climate for thousands of years — is in decline across the island. Valentine and Chris have been working since 2004 to give it a foothold on the Ards Peninsula, using honey sales to fund habitat improvement.",
+    "brandVoice": "Quietly purposeful. The conservation story is the lead — the honey is the means. Visuals should be the Ards landscape, wildflower meadows, the hives among the hedgerows of Greyabbey.",
+    "contentIdeas": [
+      "The native Irish black bee — what it is, why it matters, and why the Ards Peninsula",
+      "Wildflower meadows and the Loughshore Apiary — habitat creation in action",
+      "Honey as conservation tool — how buying a jar funds the bees' future"
+    ],
+    "whereToBuy": {
+      "label": "veesbees.com — direct online",
+      "url": "https://www.veesbees.com"
+    },
+    "contact": {
+      "website": "https://www.veesbees.com",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [5, 6, 7, 8, 9, 10],
+    "visitable": false,
+    "delivery": true,
+    "wholesale": false,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 15,
+    "name": "The Honeysuckle Bee and Me",
+    "location": {
+      "label": "Killinchy, Strangford Lough shore",
+      "lat": 54.4833,
+      "lng": -5.6600
+    },
+    "category": "honey",
+    "badges": ["sus"],
+    "tags": ["raw honey", "native Irish bees", "Great Taste Award", "Killinchy", "unpasteurised"],
+    "sustainabilityMethod": "Native Irish honeybee keeping — unpasteurised, minimally filtered, single-area honey",
+    "keyFacts": [
+      "Great Taste Award winner 2025 — one star",
+      "Honey gathered by native Irish honeybees from the flora of the Killinchy hills",
+      "Always unpasteurised and minimally filtered — retains all natural properties",
+      "Flavour profile: floral, woody and citrus notes reflecting the local landscape",
+      "Located in Killinchy — right on the Strangford Lough shore"
+    ],
+    "sustainabilityStory": "The hills around Killinchy — pastures, wildflowers, hedgerows, gardens — are what's in the jar. Native Irish bees, no pasteurisation, minimal filtering. A Great Taste Award in 2025 confirmed what locals already knew: this is honey that genuinely tastes of a specific place.",
+    "brandVoice": "Precise and place-specific. The Killinchy landscape — the same lough shore as Millbank Farm — is the identity. Great Taste recognition gives credibility without losing the small-scale authenticity.",
+    "contentIdeas": [
+      "What does Killinchy taste like? — tasting notes and the landscape behind them",
+      "Native Irish bees on the lough shore — a portrait of the hives at Killinchy",
+      "Great Taste 2025 — what the award means for a small County Down producer"
+    ],
+    "whereToBuy": {
+      "label": "thehoneysucklebeeandme.co.uk — direct online",
+      "url": "https://www.thehoneysucklebeeandme.co.uk"
+    },
+    "contact": {
+      "website": "https://www.thehoneysucklebeeandme.co.uk",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [5, 6, 7, 8, 9, 10],
+    "visitable": false,
+    "delivery": true,
+    "wholesale": false,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 16,
+    "name": "Hillsborough Honey (BT26)",
+    "location": {
+      "label": "Hillsborough, County Down",
+      "lat": 54.4617,
+      "lng": -6.0850
+    },
+    "category": "honey",
+    "badges": ["sus"],
+    "tags": ["raw honey", "cut comb", "unprocessed", "Hillsborough", "award-winning"],
+    "sustainabilityMethod": "Small apiary beekeeping — unprocessed, unheated, unblended honey from BT26 hives",
+    "keyFacts": [
+      "All honey from hives kept exclusively in the BT26 (Hillsborough) area",
+      "Completely unprocessed — not heated, blended, homogenised or treated",
+      "Award-winning cut comb honey — multiple 1st prizes at the Bristol Honey Show",
+      "Also produces award-winning cut comb straight from the hive",
+      "Available direct from the producer"
+    ],
+    "sustainabilityStory": "Honey that is entirely what it says — unprocessed, unblended, from a specific postcode. The cut comb is taken straight from the hive, honeycomb and all. Multiple show prizes reflect a beekeeper who takes quality seriously at every stage.",
+    "brandVoice": "Precise and uncompromising about quality. The postcode specificity — BT26 — is an interesting hook. This is genuinely local honey in the most literal sense.",
+    "contentIdeas": [
+      "What unprocessed really means — comparing raw vs supermarket honey",
+      "Cut comb explained — honey straight from the hive, wax and all",
+      "BT26 in a jar — the flora of Hillsborough that makes the honey"
+    ],
+    "whereToBuy": {
+      "label": "hillsboroughhoney.co.uk — direct from producer",
+      "url": "https://hillsboroughhoney.co.uk"
+    },
+    "contact": {
+      "website": "https://hillsboroughhoney.co.uk",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [5, 6, 7, 8, 9, 10],
+    "visitable": false,
+    "delivery": false,
+    "wholesale": false,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 17,
+    "name": "Michael Young MBE — Hillsborough Honey",
+    "location": {
+      "label": "Royal Hillsborough, County Down",
+      "lat": 54.4600,
+      "lng": -6.0833
+    },
+    "category": "honey",
+    "badges": ["sus"],
+    "tags": ["raw honey", "comb honey", "bee pollen", "mead", "Hillsborough", "INIB"],
+    "sustainabilityMethod": "Expert small-scale apiary beekeeping — natural honey, comb honey and bee pollen from Hillsborough hives",
+    "keyFacts": [
+      "MBE awarded in 2009 for voluntary services to beekeeping",
+      "Founder of the Institute of Northern Ireland Beekeepers (INIB)",
+      "International senior honey judge — one of the most respected figures in Irish and UK beekeeping",
+      "Produces natural honey, comb honey, raw bee pollen and mead",
+      "Stocked at Coleman's Garden Centre and In Klöver, Hillsborough village"
+    ],
+    "sustainabilityStory": "Michael Young is the closest thing Northern Ireland beekeeping has to a founding figure. He built the Institute of Northern Ireland Beekeepers from scratch, judges honey internationally, and still keeps his own hives in Hillsborough. His honey carries the weight of genuine expertise — produced by someone who has spent decades understanding exactly what makes honey exceptional.",
+    "brandVoice": "Authoritative but not showy. The MBE, the INIB, the international judging — this is someone who has given beekeeping to Northern Ireland as much as he has taken from it. The story is as much about knowledge and craft as it is about a jar of honey.",
+    "contentIdeas": [
+      "The man who built Northern Irish beekeeping — a portrait of Michael Young",
+      "What an international honey judge looks for in a jar",
+      "Mead making in Hillsborough — an ancient craft in a County Down kitchen"
+    ],
+    "whereToBuy": {
+      "label": "In Klöver, Hillsborough · Coleman's Garden Centre farm shop",
+      "url": "https://www.inklover.co.uk/michael-young-mbe-230-c.asp"
+    },
+    "contact": {
+      "website": "https://www.inklover.co.uk/michael-young-mbe-230-c.asp",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [5, 6, 7, 8, 9, 10],
+    "visitable": false,
+    "delivery": false,
+    "wholesale": false,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 18,
+    "name": "The Cookie Jar Bakery",
+    "location": {
+      "label": "Newcastle, foot of the Mournes",
+      "lat": 54.2044,
+      "lng": -5.8986
+    },
+    "category": "bakery",
+    "badges": [],
+    "tags": ["wheaten bread", "soda bread", "fruit bannock", "traditional", "Mournes"],
+    "sustainabilityMethod": "Traditional craft baking — unchanged family recipes, local ingredients, three generations of knowledge",
+    "keyFacts": [
+      "Family-owned craft bakery since 1965, now in its third generation",
+      "Founded by James and Jean Herron — James trained at Loughry College and Glasgow College of Food Technology",
+      "Famous for wheaten bread — every recipe unchanged since grandmother Jean's originals",
+      "Two shops in Newcastle plus a location in Kilkeel",
+      "Also produces award-winning take-home bread mixes — soda, wheaten and scone — shipped worldwide to ex-pats"
+    ],
+    "sustainabilityStory": "Three generations of the same family, the same recipes, at the foot of the Mourne Mountains since 1965. The Cookie Jar is a living archive of County Down baking — wheaten bread and fruit bannock made exactly as Jean Herron made them in the 1960s. The bread mix range means the taste of Newcastle travels to ex-pats in Australia, America and Europe.",
+    "brandVoice": "Unhurried, deeply rooted, Mourne-framed. This is bread that people travel for and take home in their luggage. The family continuity story — grandmother to father to James — is the identity.",
+    "contentIdeas": [
+      "Jean's recipe, sixty years on — the story of the wheaten bread that didn't change",
+      "Baking at the foot of the Mournes — a morning in the Cookie Jar kitchen",
+      "The bread mix that crosses oceans — ex-pat demand and what it says about Northern Irish food identity"
+    ],
+    "whereToBuy": {
+      "label": "121 Main Street, Newcastle · The Market Square, Kilkeel",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "",
+      "phone": "+442843722427",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": true,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 19,
+    "name": "The Heatherlea Bakery",
+    "location": {
+      "label": "Bangor, County Down",
+      "lat": 54.6536,
+      "lng": -5.6686
+    },
+    "category": "bakery",
+    "badges": [],
+    "tags": ["wheaten bread", "soda bread", "fruit loaf", "Great Taste Award", "traditional", "Bangor"],
+    "sustainabilityMethod": "Traditional Northern Irish craft baking with natural local ingredients — no industrial shortcuts",
+    "keyFacts": [
+      "Established 1937 — owned by Paul and Patricia Getty since 1990",
+      "Four-time NI Bakery of the Year — most recently 2023",
+      "Multiple Great Taste Awards including two gold stars for Coarse Wheaten Bread",
+      "Team of 40 bakers with a combined 150 years of experience",
+      "Classic Irish soda, potato and wheaten alongside spelt, multiseed and speciality loaves",
+      "Wholesale to independent retailers across Northern Ireland"
+    ],
+    "sustainabilityStory": "The Heatherlea has been baking in Bangor since 1937 — through rationing, the decline of the bread van era, and the revival of artisan food culture. Paul and Patricia Getty have stewarded it since 1990 with handwritten recipe books from their predecessors still in regular use. The bread is taken by visitors as far as Australia and Canada as a taste of home.",
+    "brandVoice": "Bangor's bakery — earned, not claimed. The awards, the longevity, the regular customers who have been coming for decades. Traditional meets contemporary is their own framing — and it's accurate. Tone should be warm and confident.",
+    "contentIdeas": [
+      "The handwritten recipe books — baking heritage passed down through Bangor kitchens",
+      "What makes a proper wheaten? Heatherlea's approach vs the supermarket loaf",
+      "Four-time Bakery of the Year — what it takes to keep winning"
+    ],
+    "whereToBuy": {
+      "label": "theheatherlea.com · 94 Main Street, Bangor · 95 Groomsport Road, Ballyholme",
+      "url": "https://theheatherlea.com"
+    },
+    "contact": {
+      "website": "https://theheatherlea.com",
+      "instagram": "@theheatherleabakery",
+      "phone": "+442891453157",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": true,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 20,
+    "name": "Counter Culture Bakery",
+    "location": {
+      "label": "Bangor, County Down",
+      "lat": 54.6551,
+      "lng": -5.6732
+    },
+    "category": "bakery",
+    "badges": ["sus"],
+    "tags": ["sourdough", "real bread", "wild yeast", "Bangor", "micro-bakery"],
+    "sustainabilityMethod": "Real sourdough — flour, water and salt only. Wild yeast starter, no additives, no shortcuts",
+    "keyFacts": [
+      "Sean Kelly's sourdough micro-bakery based in Bangor",
+      "Pure ingredients: flour, water and salt — nothing else",
+      "Sourdough crafted over two days using a wild yeast starter dating to 2016",
+      "Stocked at Millbank Farm Shop, Indie Fude, Lightfoot, Ashvale Farm Shop and local markets",
+      "Open Mon, Wed, Thu, Fri, Sat 8am–2pm at Unit 71, 2–4 Balloo Avenue, Bangor"
+    ],
+    "sustainabilityStory": "Counter Culture is as minimal as bread gets — flour, water, salt, time, and a starter that's been alive since 2016. Sean Kelly's approach sits at the opposite end of the spectrum from industrial baking. The fact that his bread is stocked at Millbank Farm Shop makes it a natural fit for this guide.",
+    "brandVoice": "Principled and pared back. The name says it: this is bread as a rejection of industrial shortcuts. Young, local, rooted in craft. Instagram presence (@counterculturerealbread) reflects the aesthetic well.",
+    "contentIdeas": [
+      "The 2016 starter — what a sourdough culture is and why it matters",
+      "Three ingredients: flour, water, salt — why simplicity is the point",
+      "Counter Culture at Millbank Farm Shop — new wave bread meets sixth-generation farm"
+    ],
+    "whereToBuy": {
+      "label": "Unit 71, 2–4 Balloo Avenue, Bangor · Millbank Farm Shop · Indie Fude · local markets",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "@counterculturerealbread",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 21,
+    "name": "Knead Bakery",
+    "location": {
+      "label": "Newtownards, Ards Peninsula",
+      "lat": 54.5927,
+      "lng": -5.6918
+    },
+    "category": "bakery",
+    "badges": [],
+    "tags": ["artisan", "family bakery", "Newtownards", "handcrafted", "traditional"],
+    "sustainabilityMethod": "Father-to-son artisan baking — everything prepared fresh on-site daily using local ingredients",
+    "keyFacts": [
+      "24 years on the High Street in Newtownards",
+      "Family-run — expertise passed from father to son through generations",
+      "Everything prepared fresh every morning on-site",
+      "Full range of traditional and artisan baked goods",
+      "Vegetarian and vegan options available"
+    ],
+    "sustainabilityStory": "Knead has been baking fresh every morning in Newtownards for over two decades. The father-to-son tradition keeps craft knowledge alive in a town centre that benefits from a genuine independent bakery on its high street.",
+    "brandVoice": "Steady, local, reliable. Twenty-four years on the same street is itself a statement. The generational skill transfer is the story — old knowledge in a contemporary bakery.",
+    "contentIdeas": [
+      "Father to son — how baking knowledge is passed down at Knead",
+      "A Newtownards morning — fresh from the oven on the High Street",
+      "Traditional meets vegan — how craft bakeries are adapting"
+    ],
+    "whereToBuy": {
+      "label": "3 High Street, Newtownards BT23 4JN",
+      "url": "https://www.kneadbakeryni.co.uk"
+    },
+    "contact": {
+      "website": "https://www.kneadbakeryni.co.uk",
+      "instagram": "",
+      "phone": "+442891823699",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": false,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 22,
+    "name": "Whitewater Brewery",
+    "location": {
+      "label": "Castlewellan, County Down",
+      "lat": 54.2647,
+      "lng": -5.9397
+    },
+    "category": "beer",
+    "badges": ["sus"],
+    "tags": ["craft beer", "ale", "stout", "lager", "Mournes", "family farm", "taproom"],
+    "sustainabilityMethod": "Fifth-generation family farm brewery — local ingredients, mountain water, independent production",
+    "keyFacts": [
+      "Founded 1996 on a 5th generation family farm on the banks of the Whitewater river",
+      "Largest microbrewery in Northern Ireland",
+      "All beers brewed with naturally soft water from the Mourne Mountains",
+      "Multiple Great Taste Awards and international recognition",
+      "On-site taproom with brewery tours available"
+    ],
+    "sustainabilityStory": "Whitewater started in a barn before the craft beer movement existed in Ireland. Bernard and Kerry Sloan built it on their family farm in Castlewellan — five generations of farming on the same land, with the river running past the door. The water from the Mournes is the ingredient that ties everything together.",
+    "brandVoice": "Rooted, pioneering, unpretentious. This is the original County Down craft brewery — predating the trend by years. The family farm setting and the taproom are both strong content opportunities.",
+    "contentIdeas": [
+      "Born in a barn — the story of Northern Ireland's original craft brewery",
+      "Mountain water, mountain beer — the Spelga Dam connection",
+      "A session in the taproom at Castlewellan — what's on tap"
+    ],
+    "whereToBuy": {
+      "label": "whitewaterbrewery.com · taproom at Castlewellan · off-licences and restaurants across NI",
+      "url": "https://www.whitewaterbrewery.com"
+    },
+    "contact": {
+      "website": "https://www.whitewaterbrewery.com",
+      "instagram": "@whitewaterbeer",
+      "phone": "+442843778900",
+      "email": "info@whitewaterbrewery.com"
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 23,
+    "name": "Mourne Mountains Brewery",
+    "location": {
+      "label": "Warrenpoint, County Down",
+      "lat": 54.0997,
+      "lng": -6.2519
+    },
+    "category": "beer",
+    "badges": ["sus"],
+    "tags": ["craft beer", "IPA", "pilsner", "stout", "Mournes", "vegan", "small batch"],
+    "sustainabilityMethod": "Independent microbrewery — Irish base malts, house-cultivated yeast, Mourne mountain water",
+    "keyFacts": [
+      "Founded 2015, inspired by a passion for craft brewing",
+      "All beers brewed with naturally soft water from Spelga Dam in the Mourne Mountains",
+      "Base malts from trusted Irish suppliers — house yeast cultivated in Ireland",
+      "All beers vegan-friendly",
+      "Multiple Great Taste Awards including two gold stars for Mourne Mist Pilsner and East Coast IPA",
+      "Wide range from crisp pilsners to bold imperial stouts — small batch seasonal releases"
+    ],
+    "sustainabilityStory": "Mourne Mountains Brewery takes its identity entirely from the landscape — the water from Spelga Dam is what makes the beer. Founded in 2015, it's become a major part of Northern Ireland's craft beer scene while staying true to its County Down roots.",
+    "brandVoice": "Bold and landscape-driven. The Mournes are the brand — every beer name and label connects back to the mountains. Strong visual identity with genuine provenance to back it up.",
+    "contentIdeas": [
+      "Spelga Dam to pint glass — the journey of Mourne mountain water",
+      "Brewing with altitude — what makes Mourne water ideal for beer",
+      "The Mourne Wall DIPA — extreme hiking, extreme hopping"
+    ],
+    "whereToBuy": {
+      "label": "mournemountainsbrewery.com · independent retailers and bars across NI",
+      "url": "https://www.mournemountainsbrewery.com"
+    },
+    "contact": {
+      "website": "https://www.mournemountainsbrewery.com",
+      "instagram": "@mournemountainsbrewery",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": false,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 24,
+    "name": "Peninsula Kelp Company",
+    "location": {
+      "label": "Newtownards, overlooking Strangford Lough",
+      "lat": 54.5927,
+      "lng": -5.6918
+    },
+    "category": "seaweed",
+    "badges": ["sus"],
+    "tags": ["kelp", "dulse", "seaweed", "hand-harvested", "Strangford Lough", "diving"],
+    "sustainabilityMethod": "Hand-dived seaweed harvesting under Crown Estate licence — rotational cropping, no machinery",
+    "keyFacts": [
+      "Founded 2019 by Andrea and Graham Gannon — he is a commercial diver, she drives product development",
+      "Holds Crown Estate licence to hand-harvest marine products from County Down waters",
+      "Rotational cropping plan protects the seabed — no machinery used",
+      "Products include dulse crackers, pure dried kelp, kelp popcorn, infused oils, seaweed butter and seaweed coffee",
+      "Supplies Noble Isle and exports globally — US, Canada, New Zealand, France and beyond",
+      "The whole family dives — including their two daughters"
+    ],
+    "sustainabilityStory": "Graham dives up to 5 metres to harvest kelp and dulse by hand from the waters around Strangford Lough, towing his haul back to shore in a bag and float. The Crown Estate licence and rotational cropping plan mean the seabed recovers between harvests. Andrea transforms the raw seaweed into a range of products that are genuinely hard to find anywhere else in Northern Ireland.",
+    "brandVoice": "Genuinely adventurous — the diving, the wetsuit, the early morning sea swims. But also domestic and approachable: seaweed butter, dulse crackers, kelp popcorn. The family dimension (kids diving too) is warm and unusual.",
+    "contentIdeas": [
+      "A morning harvest — diving for kelp in Strangford Lough with Graham",
+      "Seaweed to butter — the transformation from lough floor to Abernethy collaboration",
+      "Peninsula Kelp coffee: the most unexpected product from the lough"
+    ],
+    "whereToBuy": {
+      "label": "peninsulakelpco.com · selected delis and health shops across NI",
+      "url": "https://peninsulakelpco.com"
+    },
+    "contact": {
+      "website": "https://peninsulakelpco.com",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": false,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 25,
+    "name": "Mike's Fancy Cheese — Young Buck",
+    "location": {
+      "label": "Newtownards, County Down",
+      "lat": 54.5927,
+      "lng": -5.6910
+    },
+    "category": "cheese",
+    "badges": ["sus"],
+    "tags": ["raw milk", "blue cheese", "Young Buck", "Newtownards", "artisan", "award-winning"],
+    "sustainabilityMethod": "Small-batch raw milk cheesemaking — single herd sourcing, hand-ladled, traditional methods",
+    "keyFacts": [
+      "Young Buck: Northern Ireland's first and only raw milk blue cheese, launched November 2013",
+      "Made from milk from a single herd of 150 Holstein Friesian cows near Newtownards",
+      "Recipe based on Practical Cheesemaking, a book published in 1917",
+      "Hand-ladled into moulds — aged minimum 12 weeks",
+      "Best Blue Cheese in Ireland, 2024 Irish Cheese Awards",
+      "Stocked at Neal's Yard Dairy, Sheridans, and top restaurants across Ireland"
+    ],
+    "sustainabilityStory": "Michael Thomson left a career in social work, worked in a Belfast deli, studied at the School of Artisan Food and came home to Newtownards to make Northern Ireland's first raw milk cheese. Young Buck is built on a 1917 recipe, single-herd milk, and a set of values about what cheese should be. The 2024 Irish Cheese Award for Best Blue is the latest in a decade of recognition.",
+    "brandVoice": "Principled, confident, quietly iconoclastic. Mike's is doing something genuinely novel in Northern Ireland — raw milk cheese — and doing it at the highest level. The origin story (social worker to cheesemaker) is compelling.",
+    "contentIdeas": [
+      "From the herd to the cave — tracing a wheel of Young Buck from milk to maturity",
+      "Raw milk explained — why it matters and what Mike's does differently",
+      "Young Buck at 1 month, 2 months, 4 months — a tasting through the ageing process"
+    ],
+    "whereToBuy": {
+      "label": "mfcheese.com · Indie Fude · Sheridans · selected restaurants and delis",
+      "url": "https://mfcheese.com"
+    },
+    "contact": {
+      "website": "https://mfcheese.com",
+      "instagram": "@mikesfancycheese",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": false,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "£££",
+    "images": []
+  },
+  {
+    "id": 26,
+    "name": "Leggygowan Farm",
+    "location": {
+      "label": "Saintfield, County Down",
+      "lat": 54.4750,
+      "lng": -5.9900
+    },
+    "category": "cheese",
+    "badges": [],
+    "tags": ["goat cheese", "blue cheese", "farmhouse", "Saintfield", "artisan"],
+    "sustainabilityMethod": "Single-farm goat's cheese — milk from own 100-strong pedigree herd, handcrafted on the 20-acre farm",
+    "keyFacts": [
+      "Established 2010 by brothers Adam, Ryan and Jason Kelly as a farm diversification project",
+      "100-strong herd of pedigree goats including Nubians on a 20-acre farm at Saintfield",
+      "Produced Northern Ireland's first goat's blue cheese in 2012",
+      "Bronze medal, International Cheese Festival (Nantwich) 2012",
+      "Supplies leading hotels, restaurants and delis across Northern Ireland"
+    ],
+    "sustainabilityStory": "Three brothers, one farm, an unexpected pivot into goat's cheese — and Northern Ireland's first goat's blue cheese as the result. Leggygowan is a genuine farm diversification success story, using milk entirely from their own herd on a farm outside Saintfield.",
+    "brandVoice": "Three brothers, 100 goats, one County Down farm. The diversification story is real and relatable. The goat's blue is the lead product — unusual, locally significant, well-awarded.",
+    "contentIdeas": [
+      "Northern Ireland's first goat's blue — the story of the Leggygowan breakthrough",
+      "Meet the herd — pedigree Nubians on a Saintfield farm",
+      "Three brothers and a cheesemaking dream — a family portrait"
+    ],
+    "whereToBuy": {
+      "label": "Selected delis and farm shops across Northern Ireland — contact direct",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": false,
+    "delivery": false,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 27,
+    "name": "Finlay's Place",
+    "location": {
+      "label": "Killinchy, Strangford Lough shore",
+      "lat": 54.4833,
+      "lng": -5.6550
+    },
+    "category": "fruit",
+    "badges": [],
+    "tags": ["soft fruit", "PYO", "raspberries", "blackcurrants", "Killinchy", "lough shore"],
+    "sustainabilityMethod": "Pick-your-own soft fruit — direct from grower, zero food miles, seasonal harvest",
+    "keyFacts": [
+      "Family-run soft fruit farm established 2011 at Killinchy on the Strangford Lough shore",
+      "Pick-your-own raspberries, gooseberries, blackcurrants and redcurrants",
+      "Also sells potatoes, eggs and vegetables direct",
+      "Georgian farmhouse setting — Finlay returned to the house where he was born after 32 years in Warwickshire",
+      "Right on the Comber Road — lough-shore location"
+    ],
+    "sustainabilityStory": "Finlay returned to the house where he was born on the Strangford Lough shore after three decades away, and planted soft fruit. The PYO model means customers do the picking themselves — zero packaging, zero food miles, maximum connection to where food comes from.",
+    "brandVoice": "Quietly personal and place-rooted. The return-home story gives it depth. The lough-shore setting links it directly to the wider Strangford identity. PYO soft fruit is a strong summer content opportunity.",
+    "contentIdeas": [
+      "Coming home — Finlay's return to the lough shore and what he planted",
+      "PYO on the Strangford shore — summer soft fruit picking at Killinchy",
+      "Blackcurrants and raspberries from the lough — what to make with them"
+    ],
+    "whereToBuy": {
+      "label": "40 Comber Road, Killinchy BT23 6PB — direct from the farm",
+      "url": ""
+    },
+    "contact": {
+      "website": "",
+      "instagram": "",
+      "phone": "+442897541221",
+      "email": "info@finlaysplace.co.uk"
+    },
+    "season": [5, 6, 7, 8],
+    "visitable": true,
+    "delivery": false,
+    "wholesale": false,
+    "priceRange": "£",
+    "images": []
+  },
+  {
+    "id": 28,
+    "name": "Hilden Brewery",
+    "location": {
+      "label": "Hilden House, Lisburn",
+      "lat": 54.4969,
+      "lng": -6.0556
+    },
+    "category": "beer",
+    "badges": [],
+    "tags": ["craft beer", "oldest brewery", "Irish red ale", "pale ale", "Georgian", "Lisburn", "taproom"],
+    "sustainabilityMethod": "Independent family brewery — over 40 years of craft production in a historic Georgian setting",
+    "keyFacts": [
+      "Founded 1981 — the oldest independent brewery on the island of Ireland",
+      "Set in the Georgian courtyard of Hilden House, a former Barbour linen company estate",
+      "Thomas Andrews, designer of the Titanic, was married at Hilden House",
+      "Two brewhouses, a bottling line and a canning line added in recent years",
+      "Brewery tours available with beer flight and traditional Irish stew",
+      "On-site Tap Room restaurant and Threads café"
+    ],
+    "sustainabilityStory": "Over 40 years of independent brewing in the same Georgian courtyard — Hilden has been doing this since before craft beer was a concept in Ireland. The brewery sits inside a piece of Irish linen and industrial history, and has quietly outlasted every trend while continuing to make honest, well-crafted beer.",
+    "brandVoice": "History and character in equal measure. The oldest independent brewery in Ireland, in a Georgian linen house, where the designer of the Titanic got married. That's a lot of story in one courtyard. Tone should be warm and understated — this place doesn't need to shout.",
+    "contentIdeas": [
+      "40 years in the same courtyard — the story of Ireland's oldest independent brewery",
+      "Hilden House and the Barbour linen legacy — what came before the brewery",
+      "The Titanic connection — Thomas Andrews, Hilden House, and a pint of Headless Dog"
+    ],
+    "whereToBuy": {
+      "label": "hildenbrewery.com · Tap Room on-site · bars and off-licences across NI",
+      "url": "https://hildenbrewery.com"
+    },
+    "contact": {
+      "website": "https://hildenbrewery.com",
+      "instagram": "",
+      "phone": "",
+      "email": ""
+    },
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "visitable": true,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  }
+]

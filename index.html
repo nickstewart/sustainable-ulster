@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sustainable Strangford — Producer Directory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --lough:    #3A4A52;
+    --lough-dk: #2A363D;
+    --lough-lt: #E8F0EC;
+    --ember:    #C4622D;
+    --ember-lt: #FEF0E8;
+    --grass:    #2C4A2E;
+    --sage:     #5C8A5A;
+    --sage-lt:  #EAF3DE;
+    --stone:    #F5F0E8;
+    --charcoal: #2A2A2A;
+    --mid-grey: #8A9A9E;
+    --border:   #E2E8E6;
+    --white:    #FFFFFF;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; font-size: 15px; color: var(--charcoal); background: var(--stone); min-height: 100vh; }
+
+  /* ── NAV ── */
+  header { background: var(--lough); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 0 rgba(0,0,0,0.15); }
+  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; height: 56px; gap: 2rem; }
+  .brand { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
+  .brand-main { font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 600; color: #E8F0EC; letter-spacing: 0.01em; }
+  .brand-sub { font-size: 10px; color: #7A9EA0; letter-spacing: 0.06em; font-style: italic; }
+  .nav-tagline { font-size: 11px; color: #7A9EA0; font-style: italic; font-family: 'Lora', serif; margin-left: auto; }
+  .nav-tabs { display: flex; margin-left: 2rem; }
+  .nav-tab {
+    background: none; border: none; color: #9DB8B0; font-size: 13px; font-family: 'Inter', sans-serif;
+    padding: 0 16px; height: 56px; cursor: pointer; border-bottom: 2.5px solid transparent;
+    transition: color 0.15s, border-color 0.15s; display: flex; align-items: center; gap: 6px; white-space: nowrap;
+  }
+  .nav-tab i { font-size: 15px; }
+  .nav-tab.active { color: #E8F0EC; border-bottom-color: var(--ember); }
+  .nav-tab:hover:not(.active) { color: #C8DEC6; }
+
+  /* ── LAYOUT ── */
+  main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ── SHARED COMPONENTS ── */
+  .search-wrap { position: relative; flex: 1; }
+  .search-wrap i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--mid-grey); font-size: 16px; pointer-events: none; }
+  .search-wrap input {
+    width: 100%; height: 40px; border: 1px solid var(--border); border-radius: 8px;
+    padding: 0 12px 0 38px; font-size: 14px; font-family: 'Inter', sans-serif;
+    background: var(--white); color: var(--charcoal); outline: none; transition: border-color 0.15s;
+  }
+  .search-wrap input:focus { border-color: var(--lough); }
+  .search-wrap input::placeholder { color: var(--mid-grey); }
+
+  .filter-bar, .map-toolbar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .pill {
+    background: var(--white); border: 1px solid var(--border); border-radius: 20px;
+    padding: 5px 14px; font-size: 12.5px; font-family: 'Inter', sans-serif; color: #5A6A6E;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .pill:hover:not(.active) { border-color: var(--sage); color: var(--grass); }
+  .pill.active { background: var(--lough); color: var(--lough-lt); border-color: var(--lough); }
+
+  .tag { border-radius: 4px; padding: 2px 8px; font-size: 10.5px; font-weight: 500; }
+  .tag-sus { background: var(--sage-lt); color: var(--grass); }
+  .tag-pgi { background: var(--ember-lt); color: #8B3A00; }
+  .tag-plain { background: #F0F2F1; color: #5A6A6E; }
+
+  /* ── DIRECTORY ── */
+  .dir-toolbar { display: flex; gap: 10px; margin-bottom: 1rem; }
+  .producer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
+  .producer-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 16px;
+    cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .producer-card:hover { border-color: var(--sage); box-shadow: 0 2px 8px rgba(44,74,46,0.08); }
+  .producer-card.selected { border: 2px solid var(--lough); }
+  .card-cat { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); margin-bottom: 7px; }
+  .card-name { font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; line-height: 1.35; }
+  .card-loc { font-size: 11.5px; color: var(--mid-grey); margin-bottom: 10px; display: flex; align-items: center; gap: 3px; }
+  .card-loc i { font-size: 12px; }
+  .card-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+  .no-results { grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--mid-grey); font-size: 14px; }
+
+  .detail-panel {
+    background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.5rem; border-left: 4px solid var(--lough); animation: slideIn 0.2s ease;
+  }
+  @keyframes slideIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  .detail-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+  .detail-title { font-family: 'Lora', Georgia, serif; font-size: 18px; font-weight: 600; color: var(--charcoal); margin-bottom: 3px; }
+  .detail-loc { font-size: 12.5px; color: var(--mid-grey); display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .detail-close { background: #F0F2F1; border: none; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--mid-grey); flex-shrink: 0; transition: background 0.15s; }
+  .detail-close:hover { background: var(--border); }
+  .detail-body { font-size: 13.5px; color: #4A5A5E; line-height: 1.7; margin-bottom: 1.25rem; }
+  .detail-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1rem; }
+  .meta-card { background: var(--stone); border-radius: 8px; padding: 10px 14px; }
+  .meta-label { font-size: 10px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mid-grey); margin-bottom: 4px; }
+  .meta-val { font-size: 13px; color: var(--charcoal); line-height: 1.4; }
+  .map-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--lough); color: white; border: none; border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; transition: opacity 0.15s; }
+  .map-btn:hover { opacity: 0.88; }
+
+  /* ── MAP ── */
+  #map { width: 100%; height: 560px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+
+  /* ── NEWSLETTER ── */
+  .nl-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
+  @media (max-width: 700px) { .nl-layout { grid-template-columns: 1fr; } }
+  .nl-signup { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .nl-signup-header { background: var(--lough); padding: 1.25rem 1.5rem; }
+  .nl-signup-title { font-family: 'Lora', Georgia, serif; font-size: 18px; font-weight: 600; color: #E8F0EC; margin-bottom: 4px; }
+  .nl-signup-sub { font-size: 12.5px; color: #7A9EA0; line-height: 1.6; font-style: italic; }
+  .nl-signup-body { padding: 1.25rem 1.5rem; }
+  .form-row { display: flex; gap: 8px; margin-bottom: 14px; }
+  .form-row input, .nl-signup-body input[type="text"], .nl-signup-body input[type="email"] {
+    flex: 1; height: 38px; border: 1px solid var(--border); border-radius: 8px; padding: 0 12px;
+    font-size: 13.5px; font-family: 'Inter', sans-serif; background: #FAFAF9; color: var(--charcoal); outline: none; transition: border-color 0.15s;
+  }
+  .form-row input:focus, .nl-signup-body input:focus { border-color: var(--lough); }
+  .interest-section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mid-grey); margin-bottom: 8px; }
+  .interest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 14px; }
+  .interest-item { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: #FAFAF9; cursor: pointer; font-size: 12.5px; color: #5A6A6E; transition: all 0.15s; user-select: none; }
+  .interest-item i { font-size: 15px; }
+  .interest-item.checked { border-color: var(--sage); background: var(--sage-lt); color: var(--grass); }
+  .interest-item input { display: none; }
+  .subscribe-btn { width: 100%; height: 42px; background: var(--ember); color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: opacity 0.15s; }
+  .subscribe-btn:hover { opacity: 0.9; }
+  .subscribe-success { display: none; text-align: center; padding: 2rem; color: var(--grass); }
+  .subscribe-success i { font-size: 40px; margin-bottom: 12px; display: block; color: var(--sage); }
+  .subscribe-success p { font-size: 14px; line-height: 1.6; }
+  .nl-preview { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .nl-preview-hdr { background: var(--lough-dk); padding: 1.25rem 1.5rem; }
+  .nl-issue-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #7A9EA0; margin-bottom: 6px; }
+  .nl-issue-title { font-family: 'Lora', Georgia, serif; font-size: 17px; font-weight: 600; color: #E8F0EC; margin-bottom: 4px; line-height: 1.3; }
+  .nl-issue-date { font-size: 11px; color: #7A9EA0; font-style: italic; }
+  .nl-preview-body { padding: 1.25rem 1.5rem; }
+  .nl-story { padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .nl-story:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .nl-story-section { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ember); margin-bottom: 5px; }
+  .nl-story-title { font-family: 'Lora', serif; font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 5px; line-height: 1.4; }
+  .nl-story-body { font-size: 12.5px; color: #5A6A6E; line-height: 1.6; }
+  .nl-story-link { color: var(--lough); font-weight: 500; text-decoration: none; font-size: 12px; }
+  .nl-story-link:hover { text-decoration: underline; }
+
+  /* ── IN SEASON ── */
+  .season-intro { background: var(--lough); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1.5rem; }
+  .season-intro-icon { font-size: 36px; color: var(--lough-lt); opacity: 0.6; flex-shrink: 0; }
+  .season-intro-text h2 { font-family: 'Lora', serif; font-size: 17px; font-weight: 600; color: #E8F0EC; margin-bottom: 4px; }
+  .season-intro-text p { font-size: 13px; color: #7A9EA0; line-height: 1.6; }
+  .season-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .season-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; border-left: 4px solid var(--border); }
+  .season-card.peak { border-left-color: var(--sage); }
+  .season-card.soon { border-left-color: var(--ember); }
+  .season-status { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .peak .season-status { color: var(--sage); }
+  .soon .season-status { color: var(--ember); }
+  .later .season-status { color: var(--mid-grey); }
+  .season-name { font-family: 'Lora', serif; font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
+  .season-body { font-size: 12.5px; color: #5A6A6E; line-height: 1.6; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--lough-dk); padding: 1.5rem; text-align: center; margin-top: 2rem; }
+  .footer-brand { font-family: 'Lora', serif; font-size: 13px; color: var(--lough-lt); margin-bottom: 4px; }
+  .footer-tagline { font-size: 11px; color: #7A9EA0; font-style: italic; margin-bottom: 8px; }
+  .footer-note { font-size: 11px; color: #4A6A6E; }
+
+  @media (max-width: 600px) {
+    .nav-tagline { display: none; }
+    .detail-meta { grid-template-columns: 1fr; }
+    .producer-grid { grid-template-columns: 1fr; }
+    .nav-tab span { display: none; }
+    #map { height: 420px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="brand" href="#">
+      <span class="brand-main">Sustainable Strangford</span>
+      <span class="brand-sub">also trading as Stewart on Strangford</span>
+    </a>
+    <nav class="nav-tabs" role="tablist">
+      <button class="nav-tab active" role="tab" aria-selected="true" onclick="switchTab('directory', this)">
+        <i class="ti ti-map-pin" aria-hidden="true"></i><span>Producers</span>
+      </button>
+      <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('map', this)">
+        <i class="ti ti-map" aria-hidden="true"></i><span>Map</span>
+      </button>
+      <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('newsletter', this)">
+        <i class="ti ti-mail" aria-hidden="true"></i><span>Newsletter</span>
+      </button>
+      <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('season', this)">
+        <i class="ti ti-seeding" aria-hidden="true"></i><span>In season</span>
+      </button>
+    </nav>
+    <div class="nav-tagline">From the lough. From the land.</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- DIRECTORY -->
+  <div id="tab-directory" class="tab-panel active" role="tabpanel">
+    <div class="dir-toolbar">
+      <div class="search-wrap">
+        <i class="ti ti-search" aria-hidden="true"></i>
+        <input type="text" id="searchInput" placeholder="Search producers, places, products…" oninput="renderGrid()" aria-label="Search producers" />
+      </div>
+    </div>
+    <div class="filter-bar" role="group" aria-label="Filter by category">
+      <button class="pill active" onclick="setFilter('all', this)">All producers</button>
+      <button class="pill" onclick="setFilter('seafood', this)"><i class="ti ti-fish" aria-hidden="true"></i> Seafood</button>
+      <button class="pill" onclick="setFilter('dairy', this)">Farm &amp; dairy</button>
+      <button class="pill" onclick="setFilter('veg', this)">Veg &amp; markets</button>
+      <button class="pill" onclick="setFilter('meat', this)">Meat &amp; game</button>
+      <button class="pill" onclick="setFilter('bakery', this)">Bakery</button>
+      <button class="pill" onclick="setFilter('honey', this)">Honey</button>
+      <button class="pill" onclick="setFilter('beer', this)">Beer</button>
+      <button class="pill" onclick="setFilter('cheese', this)">Cheese</button>
+      <button class="pill" onclick="setFilter('spirits', this)">Craft spirits</button>
+      <button class="pill" onclick="setFilter('seaweed', this)">Seaweed</button>
+      <button class="pill" onclick="setFilter('fruit', this)">Fruit</button>
+    </div>
+    <div class="producer-grid" id="producerGrid" aria-live="polite"></div>
+    <div id="detailPanel"></div>
+  </div>
+
+  <!-- MAP -->
+  <div id="tab-map" class="tab-panel" role="tabpanel">
+    <div class="map-toolbar">
+      <button class="pill active" onclick="setMapFilter('all', this)">All</button>
+      <button class="pill" onclick="setMapFilter('seafood', this)"><i class="ti ti-fish" aria-hidden="true"></i> Seafood</button>
+      <button class="pill" onclick="setMapFilter('dairy', this)">Farm &amp; dairy</button>
+      <button class="pill" onclick="setMapFilter('veg', this)">Veg &amp; markets</button>
+      <button class="pill" onclick="setMapFilter('meat', this)">Meat &amp; game</button>
+      <button class="pill" onclick="setMapFilter('bakery', this)">Bakery</button>
+      <button class="pill" onclick="setMapFilter('honey', this)">Honey</button>
+      <button class="pill" onclick="setMapFilter('beer', this)">Beer</button>
+      <button class="pill" onclick="setMapFilter('cheese', this)">Cheese</button>
+      <button class="pill" onclick="setMapFilter('spirits', this)">Craft spirits</button>
+      <button class="pill" onclick="setMapFilter('seaweed', this)">Seaweed</button>
+      <button class="pill" onclick="setMapFilter('fruit', this)">Fruit</button>
+    </div>
+    <div id="map" aria-label="Map of County Down producers"></div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div id="tab-newsletter" class="tab-panel" role="tabpanel">
+    <div class="nl-layout">
+      <div class="nl-signup">
+        <div class="nl-signup-header">
+          <div class="nl-signup-title"><i class="ti ti-feather" aria-hidden="true" style="margin-right:8px;font-size:16px;"></i>The Lough Letter</div>
+          <div class="nl-signup-sub">Monthly dispatches from the water. Seasonal catches, producer stories, what's on the fire — and first look at new guide additions.</div>
+        </div>
+        <div class="nl-signup-body" id="signupBody">
+          <div class="form-row" style="margin-bottom:10px;">
+            <input type="text" id="nameInput" placeholder="Your name" aria-label="Your name" />
+          </div>
+          <div class="form-row">
+            <input type="email" id="emailInput" placeholder="Email address" aria-label="Email address" />
+          </div>
+          <div class="interest-section-label" style="margin-top:4px;">I'm interested in</div>
+          <div class="interest-grid">
+            <label class="interest-item checked" onclick="toggleInterest(this)"><input type="checkbox" checked /><i class="ti ti-fish" aria-hidden="true"></i>Seafood</label>
+            <label class="interest-item" onclick="toggleInterest(this)"><input type="checkbox" /><i class="ti ti-flame" aria-hidden="true"></i>Fire cooking</label>
+            <label class="interest-item" onclick="toggleInterest(this)"><input type="checkbox" /><i class="ti ti-building-store" aria-hidden="true"></i>Markets &amp; events</label>
+            <label class="interest-item" onclick="toggleInterest(this)"><input type="checkbox" /><i class="ti ti-bottle" aria-hidden="true"></i>Craft spirits</label>
+            <label class="interest-item" onclick="toggleInterest(this)"><input type="checkbox" /><i class="ti ti-plant" aria-hidden="true"></i>Veg &amp; farm</label>
+            <label class="interest-item" onclick="toggleInterest(this)"><input type="checkbox" /><i class="ti ti-map" aria-hidden="true"></i>Van travels</label>
+          </div>
+          <button class="subscribe-btn" onclick="handleSubscribe()">
+            <i class="ti ti-send" aria-hidden="true"></i>Subscribe — it's free
+          </button>
+        </div>
+        <div class="subscribe-success" id="subscribeSuccess">
+          <i class="ti ti-circle-check"></i>
+          <p><strong>You're on the list.</strong><br/>Look out for the first Lough Letter coming your way soon.</p>
+        </div>
+      </div>
+      <div class="nl-preview">
+        <div class="nl-preview-hdr">
+          <div class="nl-issue-label">The Lough Letter · Issue 01 · Preview</div>
+          <div class="nl-issue-title">First langoustines of the season — and the full coast run begins</div>
+          <div class="nl-issue-date">May 2026 · Stewart on Strangford</div>
+        </div>
+        <div class="nl-preview-body">
+          <div class="nl-story">
+            <div class="nl-story-section">From the water</div>
+            <div class="nl-story-title">Graeme pulled the first Freya creel haul of May yesterday morning</div>
+            <div class="nl-story-body">The tide was high at Kircubbin at 5:30am. Twelve creels, ninety minutes of hand-hauling, and a box of the finest langoustines coming off the lough this year. <a class="nl-story-link" href="#">Read the full story →</a></div>
+          </div>
+          <div class="nl-story">
+            <div class="nl-story-section">New to the guide</div>
+            <div class="nl-story-title">Millbank Farm's spring veg box is back for the season</div>
+            <div class="nl-story-body">Sixth generation on the lough shore since 1889. The first Comber Earlies of the year are two weeks away. <a class="nl-story-link" href="#">View producer profile →</a></div>
+          </div>
+          <div class="nl-story">
+            <div class="nl-story-section">In the van</div>
+            <div class="nl-story-title">Portaferry to Kilkeel — the full coast run, this June</div>
+            <div class="nl-story-body">Every harbour, every fisherman. Planning the first full County Down seafood coast journey. Filming begins June 3rd. <a class="nl-story-link" href="#">Follow the route →</a></div>
+          </div>
+          <div class="nl-story">
+            <div class="nl-story-section">On the fire this month</div>
+            <div class="nl-story-title">Creel-caught langoustines, charred seaweed butter, lough shore</div>
+            <div class="nl-story-body">Cooked minutes from landing at Kircubbin Harbour. The recipe is simple. The ingredient does the work. <a class="nl-story-link" href="#">Watch the cook →</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IN SEASON -->
+  <div id="tab-season" class="tab-panel" role="tabpanel">
+    <div class="season-intro">
+      <i class="ti ti-calendar-event season-intro-icon" aria-hidden="true"></i>
+      <div class="season-intro-text">
+        <h2>What's on the lough and the land right now</h2>
+        <p>A living guide to the County Down food calendar — what's at peak, what's coming, and what to look forward to further down the year.</p>
+      </div>
+    </div>
+    <div class="season-grid">
+      <div class="season-card peak">
+        <div class="season-status"><i class="ti ti-circle-filled" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Peak right now</div>
+        <div class="season-name">Strangford langoustines</div>
+        <div class="season-body">Spring creel season is in full swing. Firm, sweet, unstressed. From Graeme Hackworth at Kircubbin Harbour — pulled by hand from the lough floor.</div>
+      </div>
+      <div class="season-card peak">
+        <div class="season-status"><i class="ti ti-circle-filled" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Peak right now</div>
+        <div class="season-name">Rope-grown oysters</div>
+        <div class="season-body">Strangford Lough oysters are excellent May through September. Clean, briny, deeply flavoured by the lough's exceptional water quality.</div>
+      </div>
+      <div class="season-card peak">
+        <div class="season-status"><i class="ti ti-circle-filled" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Peak right now</div>
+        <div class="season-name">Abernethy spring butter</div>
+        <div class="season-body">Hand-churned from single-farm cream out of the Lagan Valley. Spring cream is the richest of the year — dulse and sea salt variety is the one to seek out.</div>
+      </div>
+      <div class="season-card soon">
+        <div class="season-status"><i class="ti ti-circle" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Coming soon</div>
+        <div class="season-name">Comber Earlies</div>
+        <div class="season-body">PGI-protected new potatoes, first of the season expected late May. Watch Millbank Farm and Comber Farmers' Market for the first deliveries.</div>
+      </div>
+      <div class="season-card soon">
+        <div class="season-status"><i class="ti ti-circle" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Coming soon</div>
+        <div class="season-name">Summer brown crab</div>
+        <div class="season-body">Creel-caught brown crab from the lough and the wider Down coast. Usually running well from June — exceptional when cooked on the harbour wall minutes after landing.</div>
+      </div>
+      <div class="season-card soon">
+        <div class="season-status"><i class="ti ti-circle" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Coming soon</div>
+        <div class="season-name">Portavogie summer prawns</div>
+        <div class="season-body">The warmer months bring the best quality Nephrops from the Irish Sea off the Ards Peninsula. PGI-protected, landed at Portavogie harbour.</div>
+      </div>
+      <div class="season-card later">
+        <div class="season-status">Autumn</div>
+        <div class="season-name">Echlinville grain harvest</div>
+        <div class="season-body">Field-to-bottle whiskey and gin. Grain grown on the Ards Peninsula farm, harvested late summer, milled and distilled on site at Kircubbin.</div>
+      </div>
+      <div class="season-card later">
+        <div class="season-status">Autumn</div>
+        <div class="season-name">Finnebrogue venison</div>
+        <div class="season-body">Red deer from Finnebrogue Estate, Downpatrick. Best from October — pairs perfectly with late-season fire cooking as the evenings draw in.</div>
+      </div>
+      <div class="season-card later">
+        <div class="season-status">Autumn</div>
+        <div class="season-name">Crab season peak</div>
+        <div class="season-body">Brown and velvet crab season traditionally peaks in autumn. Kilkeel and the wider Down coast fleet lands significant volumes from September.</div>
+      </div>
+      <div class="season-card later">
+        <div class="season-status">Winter</div>
+        <div class="season-name">Winter creel fishing</div>
+        <div class="season-body">The quiet lough. Dramatic weather, low light, long tides. Some of the most atmospheric content of the year — and still excellent langoustines when conditions allow.</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Sustainable Strangford &nbsp;·&nbsp; Stewart on Strangford</div>
+  <div class="footer-tagline">From the lough. From the land.</div>
+  <div class="footer-note">Strangford Lough &nbsp;·&nbsp; The Ards Peninsula &nbsp;·&nbsp; The East Down Coast &nbsp;·&nbsp; Draft concept, May 2026</div>
+</footer>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyZJd1R9kzMWIA1OfgrTka-KAdskYZPFI&callback=initMap&libraries=marker">
+</script>
+
+<script>
+let PRODUCERS = [];
+
+const CAT_COLORS = {
+  seafood: '#3A4A52',
+  dairy:   '#5C8A5A',
+  spirits: '#C4622D',
+  veg:     '#2C4A2E',
+  meat:    '#8B3A00',
+  bakery:  '#8B6A3A',
+  honey:   '#C4862D',
+  beer:    '#4A3A2A',
+  cheese:  '#6A8B3A',
+  seaweed: '#2C6A5A',
+  fruit:   '#8B2C4A',
+};
+
+async function loadProducers() {
+  const res  = await fetch('producers.json');
+  const data = await res.json();
+  PRODUCERS  = data.map(p => ({
+    id:     p.id,
+    name:   p.name,
+    loc:    p.location.label,
+    cat:    p.category,
+    lat:    p.location.lat,
+    lng:    p.location.lng,
+    desc:   p.sustainabilityStory,
+    method: p.sustainabilityMethod,
+    buy:    p.whereToBuy.label,
+    badges: p.badges,
+    tags:   p.tags || [],
+  }));
+  renderGrid();
+  renderMapMarkers();
+  restoreTabFromHash();
+}
+
+let activeFilter = 'all';
+let selectedId   = null;
+let mapFilter    = 'all';
+let gmap         = null;
+let mapMarkers   = [];
+let activeInfoWindow = null;
+
+// ── DIRECTORY ─────────────────────────────────────────────────────
+function renderGrid() {
+  const query = document.getElementById('searchInput').value.toLowerCase().trim();
+  const grid  = document.getElementById('producerGrid');
+  const list  = PRODUCERS.filter(p => {
+    const matchFilter = activeFilter === 'all' || p.cat === activeFilter;
+    const text = [p.name, p.loc, p.desc, ...p.tags].join(' ').toLowerCase();
+    return matchFilter && (!query || text.includes(query));
+  });
+  if (!list.length) {
+    grid.innerHTML = '<div class="no-results"><i class="ti ti-mood-empty" style="font-size:32px;display:block;margin-bottom:8px;"></i>No producers found — try a different search or filter.</div>';
+    return;
+  }
+  grid.innerHTML = list.map(p => {
+    const b = p.badges.map(x => x==='sus' ? '<span class="tag tag-sus">sustainable</span>' : '<span class="tag tag-pgi">PGI</span>').join('');
+    const t = p.tags.slice(0,2).map(x => `<span class="tag tag-plain">${x}</span>`).join('');
+    return `<article class="producer-card${selectedId===p.id?' selected':''}" onclick="selectProducer(${p.id})" role="button" tabindex="0" aria-label="${p.name}">
+      <div class="card-cat">${p.cat}</div>
+      <div class="card-name">${p.name}</div>
+      <div class="card-loc"><i class="ti ti-map-pin" aria-hidden="true"></i>${p.loc}</div>
+      <div class="card-tags">${b}${t}</div>
+    </article>`;
+  }).join('');
+}
+
+function selectProducer(id) {
+  selectedId = selectedId === id ? null : id;
+  renderGrid();
+  const panel = document.getElementById('detailPanel');
+  if (!selectedId) { panel.innerHTML = ''; return; }
+  const p = PRODUCERS.find(x => x.id === id);
+  const b = p.badges.map(x => x==='sus' ? '<span class="tag tag-sus">sustainable</span>' : '<span class="tag tag-pgi">PGI</span>').join('');
+  panel.innerHTML = `
+    <div class="detail-panel">
+      <div class="detail-header">
+        <div>
+          <div class="detail-title">${p.name}</div>
+          <div class="detail-loc"><i class="ti ti-map-pin" aria-hidden="true"></i>${p.loc}&nbsp;${b}</div>
+        </div>
+        <button class="detail-close" onclick="selectProducer(${p.id})" aria-label="Close"><i class="ti ti-x" aria-hidden="true"></i></button>
+      </div>
+      <div class="detail-body">${p.desc}</div>
+      <div class="detail-meta">
+        <div class="meta-card"><div class="meta-label">Method</div><div class="meta-val">${p.method}</div></div>
+        <div class="meta-card"><div class="meta-label">Where to buy</div><div class="meta-val">${p.buy}</div></div>
+      </div>
+      <button class="map-btn" onclick="openOnMap(${p.id})"><i class="ti ti-map" aria-hidden="true"></i>View on map</button>
+    </div>`;
+  panel.scrollIntoView({ behavior:'smooth', block:'nearest' });
+}
+
+function setFilter(f, el) {
+  activeFilter = f;
+  selectedId = null;
+  document.getElementById('detailPanel').innerHTML = '';
+  document.querySelectorAll('.filter-bar .pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  renderGrid();
+}
+
+// ── GOOGLE MAPS ───────────────────────────────────────────────────
+function initMap() {
+  gmap = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 54.38, lng: -5.72 },
+    zoom: 10,
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: true,
+    styles: [
+      { featureType:'water',        elementType:'geometry',     stylers:[{color:'#c9d8e0'}] },
+      { featureType:'landscape',    elementType:'geometry',     stylers:[{color:'#f0ece2'}] },
+      { featureType:'road',         elementType:'geometry',     stylers:[{color:'#ffffff'}] },
+      { featureType:'road.arterial',elementType:'geometry',     stylers:[{color:'#e8e0d0'}] },
+      { featureType:'poi',          elementType:'labels',       stylers:[{visibility:'off'}] },
+      { featureType:'transit',                                  stylers:[{visibility:'off'}] },
+      { featureType:'administrative',elementType:'labels.text.fill', stylers:[{color:'#3A4A52'}] },
+    ],
+  });
+  renderMapMarkers();
+}
+
+function pinSvg(color) {
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 0 32 40">
+      <path d="M16 2C9.37 2 4 7.37 4 14c0 9 12 24 12 24S28 23 28 14C28 7.37 22.63 2 16 2z" fill="${color}" stroke="white" stroke-width="1.5"/>
+      <circle cx="16" cy="14" r="5.5" fill="white" opacity="0.9"/>
+    </svg>`
+  );
+}
+
+function renderMapMarkers() {
+  if (!gmap) return;
+  mapMarkers.forEach(m => m.setMap(null));
+  mapMarkers = [];
+  if (activeInfoWindow) { activeInfoWindow.close(); activeInfoWindow = null; }
+
+  const list = mapFilter === 'all' ? PRODUCERS : PRODUCERS.filter(p => p.cat === mapFilter);
+
+  list.forEach(p => {
+    const color = CAT_COLORS[p.cat] || '#3A4A52';
+    const marker = new google.maps.Marker({
+      position: { lat: p.lat, lng: p.lng },
+      map: gmap,
+      title: p.name,
+      icon: { url: pinSvg(color), scaledSize: new google.maps.Size(32, 40), anchor: new google.maps.Point(16, 40) },
+    });
+
+    const badges = p.badges.map(b => b==='sus'
+      ? `<span style="background:#EAF3DE;color:#2C4A2E;border-radius:4px;padding:1px 7px;font-size:10px;font-weight:600;margin-right:4px;">sustainable</span>`
+      : `<span style="background:#FEF0E8;color:#8B3A00;border-radius:4px;padding:1px 7px;font-size:10px;font-weight:600;margin-right:4px;">PGI</span>`
+    ).join('');
+
+    const iw = new google.maps.InfoWindow({
+      maxWidth: 280,
+      content: `<div style="font-family:'Inter',sans-serif;padding:2px 4px;min-width:220px;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#5C8A5A;margin-bottom:5px;">${p.cat}</div>
+        <div style="font-family:'Lora',Georgia,serif;font-size:14px;font-weight:600;color:#2A2A2A;line-height:1.3;margin-bottom:3px;">${p.name}</div>
+        <div style="font-size:11.5px;color:#8A9A9E;margin-bottom:7px;">📍 ${p.loc}</div>
+        <div style="margin-bottom:8px;">${badges}</div>
+        <div style="font-size:12px;color:#4A5A5E;line-height:1.55;margin-bottom:10px;">${p.desc.substring(0,140)}…</div>
+        <div style="font-size:11px;color:#5A6A6E;border-top:1px solid #E2E8E6;padding-top:8px;"><strong>Buy:</strong> ${p.buy}</div>
+      </div>`,
+    });
+
+    marker.addListener('click', () => {
+      if (activeInfoWindow) activeInfoWindow.close();
+      iw.open(gmap, marker);
+      activeInfoWindow = iw;
+    });
+
+    marker.pid = p.id;
+    mapMarkers.push(marker);
+  });
+}
+
+function setMapFilter(f, el) {
+  mapFilter = f;
+  document.querySelectorAll('.map-toolbar .pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  renderMapMarkers();
+}
+
+function openOnMap(id) {
+  const mapTab = document.querySelectorAll('.nav-tab')[1];
+  switchTab('map', mapTab);
+  setTimeout(() => {
+    if (!gmap) return;
+    const p = PRODUCERS.find(x => x.id === id);
+    gmap.setCenter({ lat: p.lat, lng: p.lng });
+    gmap.setZoom(13);
+    const m = mapMarkers.find(x => x.pid === id);
+    if (m) google.maps.event.trigger(m, 'click');
+  }, 200);
+}
+
+// ── TAB SWITCHING ─────────────────────────────────────────────────
+function switchTab(id, el) {
+  document.querySelectorAll('.tab-panel').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+  document.getElementById('tab-' + id).classList.add('active');
+  if (el) { el.classList.add('active'); el.setAttribute('aria-selected','true'); }
+  if (id === 'map' && gmap) setTimeout(() => google.maps.event.trigger(gmap, 'resize'), 50);
+  window.location.hash = id === 'directory' ? '' : id;
+}
+
+function restoreTabFromHash() {
+  const hash = window.location.hash.replace('#', '') || 'directory';
+  const tab  = document.querySelector(`.nav-tab[onclick*="'${hash}'"]`);
+  if (tab) switchTab(hash, tab);
+}
+
+window.addEventListener('hashchange', restoreTabFromHash);
+
+// ── NEWSLETTER ────────────────────────────────────────────────────
+function toggleInterest(el) { el.classList.toggle('checked'); }
+
+function handleSubscribe() {
+  const email = document.getElementById('emailInput').value.trim();
+  if (!email || !email.includes('@')) {
+    const inp = document.getElementById('emailInput');
+    inp.focus(); inp.style.borderColor = '#C4622D';
+    setTimeout(() => inp.style.borderColor = '', 1500);
+    return;
+  }
+  document.getElementById('signupBody').style.display = 'none';
+  document.getElementById('subscribeSuccess').style.display = 'block';
+}
+
+// ── KEYBOARD ──────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.classList.contains('producer-card')) {
+    const id = parseInt(e.target.getAttribute('onclick').match(/\d+/)[0]);
+    selectProducer(id);
+  }
+});
+
+loadProducers();
+</script>
+</body>
+</html>
