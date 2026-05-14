@@ -175,6 +175,28 @@
   .season-name { font-family: 'Lora', serif; font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
   .season-body { font-size: 12.5px; color: #5A6A6E; line-height: 1.6; }
 
+  /* ── INSTALL BANNER ── */
+  .install-banner {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--lough-dk);
+    padding: 14px 16px;
+    z-index: 200;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
+    animation: slideUp 0.3s ease;
+  }
+  @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+  .install-banner.visible { display: flex; align-items: center; gap: 12px; }
+  .install-banner-icon { font-size: 28px; flex-shrink: 0; }
+  .install-banner-text { flex: 1; }
+  .install-banner-title { font-size: 13px; font-weight: 600; color: #E8F0EC; margin-bottom: 2px; }
+  .install-banner-sub { font-size: 11.5px; color: #7A9EA0; line-height: 1.5; }
+  .install-banner-sub strong { color: #B8D0C8; }
+  .install-banner-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .install-btn { background: var(--ember); color: white; border: none; border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; white-space: nowrap; }
+  .install-dismiss { background: none; border: 1px solid #4A6A6E; color: #7A9EA0; border-radius: 8px; padding: 8px 10px; font-size: 13px; font-family: 'Inter', sans-serif; cursor: pointer; }
+
   /* ── FOOTER ── */
   footer { background: var(--lough-dk); padding: 1.5rem; text-align: center; margin-top: 2rem; }
   .footer-brand { font-family: 'Lora', serif; font-size: 13px; color: var(--lough-lt); margin-bottom: 4px; }
@@ -398,6 +420,18 @@
   <div class="footer-tagline">From the lough. From the land.</div>
   <div class="footer-note">Strangford Lough &nbsp;·&nbsp; The Ards Peninsula &nbsp;·&nbsp; The East Down Coast &nbsp;·&nbsp; Draft concept, May 2026</div>
 </footer>
+
+<div class="install-banner" id="installBanner">
+  <div class="install-banner-icon">🌊</div>
+  <div class="install-banner-text">
+    <div class="install-banner-title">Add to your home screen</div>
+    <div class="install-banner-sub" id="installBannerSub"></div>
+  </div>
+  <div class="install-banner-actions">
+    <button class="install-btn" id="installBtn">Install</button>
+    <button class="install-dismiss" onclick="dismissInstallBanner()">✕</button>
+  </div>
+</div>
 
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyZJd1R9kzMWIA1OfgrTka-KAdskYZPFI&callback=initMap&libraries=marker">
@@ -645,6 +679,44 @@ document.addEventListener('keydown', e => {
 });
 
 loadProducers();
+
+// ── INSTALL BANNER ────────────────────────────────────────────────
+let deferredPrompt = null;
+
+function dismissInstallBanner() {
+  document.getElementById('installBanner').classList.remove('visible');
+  localStorage.setItem('installDismissed', '1');
+}
+
+function showInstallBanner() {
+  if (localStorage.getItem('installDismissed')) return;
+  if (window.navigator.standalone) return; // already installed on iOS
+  document.getElementById('installBanner').classList.add('visible');
+}
+
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+if (isIOS) {
+  document.getElementById('installBannerSub').innerHTML =
+    'Tap the <strong>Share</strong> button then <strong>Add to Home Screen</strong>';
+  document.getElementById('installBtn').style.display = 'none';
+  setTimeout(showInstallBanner, 2000);
+} else {
+  document.getElementById('installBannerSub').innerHTML =
+    'Install the app for the best experience';
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    setTimeout(showInstallBanner, 2000);
+  });
+  document.getElementById('installBtn').addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') dismissInstallBanner();
+    deferredPrompt = null;
+  });
+}
 </script>
 </body>
 </html>
