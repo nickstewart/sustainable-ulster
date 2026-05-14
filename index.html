@@ -699,6 +699,10 @@ function showInstallBanner() {
   document.getElementById('installBanner').classList.add('visible');
 }
 
+if (new URLSearchParams(window.location.search).has('reset')) {
+  localStorage.removeItem('installDismissed');
+}
+
 const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
 
 if (isIOS) {
