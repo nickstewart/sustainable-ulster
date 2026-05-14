@@ -36,25 +36,37 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', system-ui, sans-serif; font-size: 15px; color: var(--charcoal); background: var(--stone); min-height: 100vh; }
 
-  /* ── NAV ── */
+  /* ── HEADER ── */
   header { background: var(--lough); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 0 rgba(0,0,0,0.15); }
-  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; height: 56px; gap: 2rem; }
+  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; height: 52px; }
   .brand { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
   .brand-main { font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 600; color: #E8F0EC; letter-spacing: 0.01em; }
   .brand-sub { font-size: 10px; color: #7A9EA0; letter-spacing: 0.06em; font-style: italic; }
   .nav-tagline { font-size: 11px; color: #7A9EA0; font-style: italic; font-family: 'Lora', serif; margin-left: auto; }
-  .nav-tabs { display: flex; margin-left: 2rem; }
-  .nav-tab {
-    background: none; border: none; color: #9DB8B0; font-size: 13px; font-family: 'Inter', sans-serif;
-    padding: 0 16px; height: 56px; cursor: pointer; border-bottom: 2.5px solid transparent;
-    transition: color 0.15s, border-color 0.15s; display: flex; align-items: center; gap: 6px; white-space: nowrap;
+
+  /* ── BOTTOM NAV ── */
+  .bottom-nav {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: var(--lough-dk);
+    display: flex;
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+    padding-bottom: env(safe-area-inset-bottom);
   }
-  .nav-tab i { font-size: 15px; }
-  .nav-tab.active { color: #E8F0EC; border-bottom-color: var(--ember); }
+  .nav-tab {
+    flex: 1; background: none; border: none; color: #7A9EA0;
+    font-size: 10px; font-family: 'Inter', sans-serif; font-weight: 500;
+    padding: 10px 4px 12px; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    border-top: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    letter-spacing: 0.03em;
+  }
+  .nav-tab i { font-size: 22px; }
+  .nav-tab.active { color: #E8F0EC; border-top-color: var(--ember); }
   .nav-tab:hover:not(.active) { color: #C8DEC6; }
 
   /* ── LAYOUT ── */
-  main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1.5rem 6rem; }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
@@ -210,7 +222,6 @@
     .nav-tagline { display: none; }
     .detail-meta { grid-template-columns: 1fr; }
     .producer-grid { grid-template-columns: 1fr; }
-    .nav-tab span { display: none; }
     #map { height: 420px; }
   }
 </style>
@@ -223,23 +234,24 @@
       <span class="brand-main">Sustainable Strangford</span>
       <span class="brand-sub">also trading as Stewart on Strangford</span>
     </a>
-    <nav class="nav-tabs" role="tablist">
-      <button class="nav-tab active" role="tab" aria-selected="true" onclick="switchTab('directory', this)">
-        <i class="ti ti-map-pin" aria-hidden="true"></i><span>Producers</span>
-      </button>
-      <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('map', this)">
-        <i class="ti ti-map" aria-hidden="true"></i><span>Map</span>
-      </button>
-      <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('newsletter', this)">
-        <i class="ti ti-mail" aria-hidden="true"></i><span>Newsletter</span>
-      </button>
-      <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('season', this)">
-        <i class="ti ti-seeding" aria-hidden="true"></i><span>In season</span>
-      </button>
-    </nav>
     <div class="nav-tagline">From the lough. From the land.</div>
   </div>
 </header>
+
+<nav class="bottom-nav" role="tablist">
+  <button class="nav-tab active" role="tab" aria-selected="true" onclick="switchTab('directory', this)">
+    <i class="ti ti-map-pin" aria-hidden="true"></i><span>Producers</span>
+  </button>
+  <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('map', this)">
+    <i class="ti ti-map" aria-hidden="true"></i><span>Map</span>
+  </button>
+  <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('newsletter', this)">
+    <i class="ti ti-mail" aria-hidden="true"></i><span>Newsletter</span>
+  </button>
+  <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('season', this)">
+    <i class="ti ti-seeding" aria-hidden="true"></i><span>In season</span>
+  </button>
+</nav>
 
 <main>
 
