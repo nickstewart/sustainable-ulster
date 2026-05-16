@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sustainable Strangford — Producer Directory</title>
+<title>Ulster.food — Food Stories</title>
 <link rel="manifest" href="manifest.json" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-mobile-web-app-title" content="Strangford" />
+<meta name="apple-mobile-web-app-title" content="Ulster.food" />
 <link rel="apple-touch-icon" href="icon-192.png" />
 <meta name="theme-color" content="#3A4A52" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -235,7 +235,7 @@
 
 <nav class="bottom-nav" role="tablist">
   <button class="nav-tab active" role="tab" aria-selected="true" onclick="switchTab('directory', this)">
-    <i class="ti ti-map-pin" aria-hidden="true"></i><span>Producers</span>
+    <i class="ti ti-map-pin" aria-hidden="true"></i><span>Food Stories</span>
   </button>
   <button class="nav-tab" role="tab" aria-selected="false" onclick="switchTab('map', this)">
     <i class="ti ti-map" aria-hidden="true"></i><span>Map</span>
@@ -255,11 +255,11 @@
     <div class="dir-toolbar">
       <div class="search-wrap">
         <i class="ti ti-search" aria-hidden="true"></i>
-        <input type="text" id="searchInput" placeholder="Search producers, places, products…" oninput="renderGrid()" aria-label="Search producers" />
+        <input type="text" id="searchInput" placeholder="Search food stories, places, products…" oninput="renderGrid()" aria-label="Search food stories" />
       </div>
     </div>
     <div class="filter-bar" role="group" aria-label="Filter by category">
-      <button class="pill active" onclick="setFilter('all', this)">All producers</button>
+      <button class="pill active" onclick="setFilter('all', this)">All stories</button>
       <button class="pill" onclick="setFilter('seafood', this)"><i class="ti ti-fish" aria-hidden="true"></i> Seafood</button>
       <button class="pill" onclick="setFilter('dairy', this)">Farm &amp; dairy</button>
       <button class="pill" onclick="setFilter('veg', this)">Veg &amp; markets</button>
@@ -343,7 +343,7 @@
           <div class="nl-story">
             <div class="nl-story-section">New to the guide</div>
             <div class="nl-story-title">Millbank Farm's spring veg box is back for the season</div>
-            <div class="nl-story-body">Sixth generation on the lough shore since 1889. The first Comber Earlies of the year are two weeks away. <a class="nl-story-link" href="#">View producer profile →</a></div>
+            <div class="nl-story-body">Sixth generation on the lough shore since 1889. The first Comber Earlies of the year are two weeks away. <a class="nl-story-link" href="#">Read the full story →</a></div>
           </div>
           <div class="nl-story">
             <div class="nl-story-section">In the van</div>
@@ -499,7 +499,7 @@ function renderGrid() {
     return matchFilter && (!query || text.includes(query));
   });
   if (!list.length) {
-    grid.innerHTML = '<div class="no-results"><i class="ti ti-mood-empty" style="font-size:32px;display:block;margin-bottom:8px;"></i>No producers found — try a different search or filter.</div>';
+    grid.innerHTML = '<div class="no-results"><i class="ti ti-mood-empty" style="font-size:32px;display:block;margin-bottom:8px;"></i>No stories found — try a different search or filter.</div>';
     return;
   }
   grid.innerHTML = list.map(p => {
